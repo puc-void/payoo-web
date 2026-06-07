@@ -1,20 +1,14 @@
 document.getElementById("login-btn").addEventListener("click", function () {
-    const numberInput = document.getElementById("input-number")
-    const contactNumber = numberInput.value;
-    console.log(contactNumber);
+    const contactNumber = document.getElementById("input-number").value.trim();
+    const pinNumber = document.getElementById("input-pin").value.trim();
 
+    console.log("Number:", contactNumber);
+    console.log("PIN:", pinNumber);
 
-    const inputPin = document.getElementById("input-pin")
-    const pinNumber = inputPin.value;
-    console.log(pinNumber)
-
-
-    if (contactNumber == "01891632464" && pinNumber == "2468") {
-        alert("Login Success!")
-        window.location.assign("./home.html");
-    }
-    else {
-        alert("Login Failed")
-        return;
+    if (contactNumber === "01891632464" && pinNumber === "2468") {
+        console.log("Redirecting...");
+        window.location.href = "home.html";
+    } else {
+        alert("Login Failed");
     }
 });
