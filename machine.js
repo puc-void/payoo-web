@@ -1,10 +1,10 @@
 console.log("Machine is running...");
 
 // machine-> id
-function getValueFromInput(id){
-    const input= document.getElementById(id);
+function getValueFromInput(id) {
+    const input = document.getElementById(id);
     const value = input.value;
-    console.log(id,value);
+    console.log(id, value);
     return value;
 }
 
@@ -16,7 +16,7 @@ function getBalance() {
     return Number(balance);
 }
 
-function setBalance(value){
-    const balanceElement= document.getElementById("balance");
-    balanceElement.innerText= value;
+function setBalance(value) {
+    const balanceElement = document.getElementById("balance");
+    balanceElement.innerText = value;
 }
