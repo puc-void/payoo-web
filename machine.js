@@ -30,11 +30,13 @@ function showSection(id) {
     const transferMoney = document.getElementById("transfer-money");
     const bonus = document.getElementById("bonus");
     const payBill = document.getElementById("pay-bill");
+    const transaction= document.getElementById("history")
     addMoney.classList.add("hidden");
     cashOutMoney.classList.add("hidden");
     transferMoney.classList.add("hidden");
     bonus.classList.add("hidden");
     payBill.classList.add("hidden");
+    transaction.classList.add("hidden");
 
 
     const selected = document.getElementById(id);

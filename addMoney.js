@@ -1,3 +1,4 @@
+
 document.getElementById("add-money-btn").addEventListener("click", function () {
     const bankAccount = getValueFromInput("add-money-bank");
     console.log(bankAccount);
@@ -31,6 +32,26 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
         const newBalance = currentBalance + Number(addMoneyAmount);
         setBalance(newBalance);
         alert(`Money added successfully! from ${bankAccount} at ${new Date().toLocaleTimeString()}`);
+
+        // 1. history container ke dhore niye asbe
+        const history = document.getElementById("history-container");
+
+        //2. new div create korbo
+
+        const newHistory = document.createElement("div");
+
+        //3. new div inner html a add korbo
+        newHistory.innerHTML = `
+        <div class="transaction-card p-5 bg-base-100">
+        
+        Money added successfully! from ${bankAccount} at ${new Date().toLocaleTimeString()}
+            
+        </div>
+        `;
+
+        //4. history te append korbo
+        history.append(newHistory);
+
     }
     else {
         alert("Invalid PIN");
